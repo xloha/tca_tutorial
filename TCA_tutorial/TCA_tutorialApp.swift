@@ -10,14 +10,15 @@ import SwiftUI
 
 @main
 struct TCA_tutorialApp: App {
-    static let store = Store(initialState: AppFeature.State()) {
-        AppFeature()
+    static let store = Store(initialState: ContactsFeature.State()) {
+        ContactsFeature()
             ._printChanges()
     }
 
     var body: some Scene {
         WindowGroup {
-            AppView(store: TCA_tutorialApp.store)
+            ContactsView(store: TCA_tutorialApp.store)
+//            AppView(store: TCA_tutorialApp.store)
         }
     }
 }
